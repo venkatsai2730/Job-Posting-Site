@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:5000/api/jobs';
+// Access API_URL from environment variables
+const API_URL = process.env.REACT_APP_API_URL;
 
 export const getJobs = async (filters) => {
   const params = { ...filters };
