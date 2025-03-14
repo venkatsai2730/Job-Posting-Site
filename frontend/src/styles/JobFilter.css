@@ -1,0 +1,37 @@
+.filter-container {
+  display: flex;
+  gap: 15px;
+  padding: 20px 30px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: slideInUp 0.6s ease-out;
+}
+
+.filter-input, .filter-select {
+  padding: 10px 15px;
+  border: 1px solid #e0e7f0;
+  border-radius: 6px;
+  width: 200px;
+  background-color: #ffffff;
+  color: #333333;
+  font-size: 14px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filter-input:focus, .filter-select:focus {
+  border-color: #6b46c1;
+  box-shadow: 0 0 8px rgba(107, 70, 193, 0.3);
+  outline: none;
+}
+
+.salary-slider {
+  width: 200px;
+  margin: 10px 0;
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

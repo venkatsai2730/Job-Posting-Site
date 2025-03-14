@@ -1,0 +1,141 @@
+.App {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #ffffff;
+  min-height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #6b46c1, #8e44ad);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  animation: slideInDown 0.6s ease-out;
+}
+
+.logo {
+  font-size: 28px;
+  color: #ffffff;
+  margin-right: 20px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  color: #4dabf7;
+  transform: translateY(-2px);
+}
+
+.create-btn {
+  background-color: #6b46c1;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  margin-left: 15px;
+}
+
+.create-btn:hover {
+  background-color: #553c9a;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(107, 70, 193, 0.4);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(107, 70, 193, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content {
+  background-color: #f0f4f8;
+  padding: 25px;
+  border-radius: 10px;
+  width: 550px;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: zoomIn 0.5s ease-out;
+  color: #333333;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #333333;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.close-btn:hover {
+  color: #ff4d4d;
+  transform: rotate(90deg);
+}
+
+.error-message {
+  text-align: center;
+  color: #ff4d4d;
+  font-size: 16px;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #ffe6e6;
+  border-radius: 5px;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.5); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
