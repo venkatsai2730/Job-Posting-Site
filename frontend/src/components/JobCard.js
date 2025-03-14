@@ -44,7 +44,7 @@ const JobCard = ({ job, onDelete }) => {
       <p className="job-description">{job.description}</p>
       <div className="button-container">
         <button className="apply-btn">Apply Now</button>
-        {onDelete && <button className="delete-btn" onClick={() => onDelete(job._id)}>Delete</button>}
+       
       </div>
     </div>
   );
